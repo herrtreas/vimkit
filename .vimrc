@@ -24,6 +24,8 @@ set cindent
 set autoindent
 set smarttab
 set expandtab
+
+filetype indent on
  
 " Visual
 set showmatch  " Show matching brackets.
@@ -38,3 +40,5 @@ set laststatus=2  " Always show status line.
 " gvim specific
 set mousehide  " Hide mouse after chars typed
 set mouse=a  " Mouse in all modes
+
+let g:rubycomplete_rails = 1
