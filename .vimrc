@@ -41,4 +41,16 @@ set laststatus=2  " Always show status line.
 set mousehide  " Hide mouse after chars typed
 set mouse=a  " Mouse in all modes
 
+let mapleader = ","
 let g:rubycomplete_rails = 1
+
+" FuzzyFinderTextMate
+let g:fuzzy_ignore = "*.log"
+let g:fuzzy_matching_limit = 70
+
+map <leader>t :FuzzyFinderTextMate<CR>
+map <leader>b :FuzzyFinderBuffer<CR>
+
+" User ack instead of grep
+set grepprg=ack
+set grepformat=%f:%l:%m
