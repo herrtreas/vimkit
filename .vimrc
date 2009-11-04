@@ -9,7 +9,7 @@ set incsearch
 set hlsearch
 set nowrap
 
-colorscheme vividchalk
+colorscheme rubyphunk
 
 syntax on
 
@@ -54,3 +54,6 @@ map <leader>b :FuzzyFinderBuffer<CR>
 " User ack instead of grep
 set grepprg=ack
 set grepformat=%f:%l:%m
+
+" Stop current search
+nmap <silent> <C-N> :silent noh<CR>
