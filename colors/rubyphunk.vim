@@ -93,7 +93,7 @@ hi link javascriptNull          Constant
 
 call s:hifg("Normal","#EEEEEE","White",87)
 if &background == "light" || has("gui_running")
-    hi Normal guibg=#101010 ctermbg=DarkGrey
+    hi Normal guibg=#202020 ctermbg=DarkGrey
 else
     hi Normal guibg=Black ctermbg=NONE
 endif

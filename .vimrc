@@ -1,3 +1,6 @@
+" Init pathogen
+call pathogen#runtime_append_all_bundles()
+
 set nocompatible
 set backspace=indent,eol,start
 set nobackup
@@ -9,7 +12,7 @@ set incsearch
 set hlsearch
 set nowrap
 
-colorscheme rubyphunk
+colorscheme urge
 
 syntax on
 
@@ -26,6 +29,7 @@ set smarttab
 set expandtab
 
 filetype indent on
+filetype plugin on
  
 " Visual
 set showmatch  " Show matching brackets.
@@ -57,3 +61,4 @@ set grepformat=%f:%l:%m
 
 " Stop current search
 nmap <silent> <C-N> :silent noh<CR>
+
