@@ -1,9 +1,11 @@
 " Init pathogen
-call pathogen#runtime_append_all_bundles()
+call pathogen#infect()
 
 set nocompatible
 set backspace=indent,eol,start
 set nobackup
+set nowritebackup
+set noswapfile
 set history=50
 set ruler
 set nu
@@ -12,7 +14,7 @@ set incsearch
 set hlsearch
 set nowrap
 
-colorscheme urge
+colorscheme rubyphunk
 
 syntax on
 
@@ -27,6 +29,11 @@ set cindent
 set autoindent
 set smarttab
 set expandtab
+
+if has("gui_running")
+  set guioptions=egmrt
+endif
+
 
 filetype indent on
 filetype plugin on
@@ -52,7 +59,7 @@ let g:rubycomplete_rails = 1
 let g:fuzzy_ignore = "*.log"
 let g:fuzzy_matching_limit = 70
 
-map <leader>t :FuzzyFinderTextMate<CR>
+" map <leader>t :FuzzyFinderTextMate<CR>
 map <leader>b :FuzzyFinderBuffer<CR>
 
 " User ack instead of grep
@@ -62,3 +69,9 @@ set grepformat=%f:%l:%m
 " Stop current search
 nmap <silent> <C-N> :silent noh<CR>
 
+" Remove trailing whitespaces on save
+" autocmd BufWritePre *.coffee :%s/\s\+$//e
+" autocmd BufWritePre *.rb :%s/\s\+$//e
+" autocmd BufWritePre *.erb :%s/\s\+$//e
+" autocmd BufWritePre *.haml :%s/\s\+$//e
+" autocmd BufWritePre *.sass :%s/\s\+$//e
